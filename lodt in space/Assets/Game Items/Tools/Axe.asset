@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06a2dd454aa4f6945b6922452473bd2b, type: 3}
+  m_Name: Axe
+  m_EditorClassIdentifier: 
+  ID: 10
+  Name: Axe
+  Description: Simple axe to gather wood
+  Icon: {fileID: 21300000, guid: 437d5ac11c6c34c1ca3efef2000e7f12, type: 3}
+  IsCountable: 0
+  MaxAmount: 0
+  Type: 0
+  Tool: 1
+  IsBreakable: 1
+  Durability: 80
+  Rarity: 0
+  Cost: 0
+  Damage: 0
+  Healing: 0
+  UsingRange: 0

@@ -1,0 +1,28 @@
+# Blender MTL File: 'PineTree1.blend'
+# Material Count: 2
+
+newmtl Bark
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump -bm 0.500000 C:\\Users\\Kosmolet\\Desktop\\NMS\\Bark\\Bark_Normal.png
+map_Kd C:\\Users\\Kosmolet\\Desktop\\NMS\\Bark\\Bark_Albedo.png
+map_Ns C:\\Users\\Kosmolet\\Desktop\\NMS\\Bark\\Bark_Roughness.png
+
+newmtl Leaves
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.184475 0.191202 0.450786
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump E:\\Avatar\\Naku Yokai\\Assets\\PureNature\\Models\\Vegetation\\PineTrees\\Textures\\PineTreeLeaves01_n.png
+map_Kd C:\\Users\\Kosmolet\\Desktop\\NMS\\Leaves\\PineTreeLeaves01_albedo.png
+map_d E:\\Avatar\\Naku Yokai\\Assets\\PureNature\\Models\\Vegetation\\PineTrees\\Textures\\PineTreeLeaves01_a.png

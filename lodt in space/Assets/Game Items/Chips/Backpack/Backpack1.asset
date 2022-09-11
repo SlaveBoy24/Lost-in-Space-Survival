@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06a2dd454aa4f6945b6922452473bd2b, type: 3}
+  m_Name: Backpack1
+  m_EditorClassIdentifier: 
+  ID: 21
+  Name: Capacity Chip (normal)
+  Description: 'Default capacity chip what unlock 5 inventory slots '
+  Icon: {fileID: 21300000, guid: 708d166a184134c969e23cbafab6e306, type: 3}
+  IsCountable: 0
+  MaxAmount: 0
+  Type: 9
+  Tool: 0
+  Capacity: 5
+  IsBreakable: 0
+  Durability: 0
+  Rarity: 0
+  Cost: 0
+  Damage: 0
+  Healing: 0
+  UsingRange: 0
