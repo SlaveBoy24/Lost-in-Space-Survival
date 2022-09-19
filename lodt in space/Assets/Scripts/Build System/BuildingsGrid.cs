@@ -43,9 +43,9 @@ public class BuildingsGrid : MonoBehaviour
             if (_xPosition < 0 || _xPosition > GridSize.x - flyingBuilding.Size.x) _isAvailableToPlace = false;
             if (_yPosition < 0 || _yPosition > GridSize.y - flyingBuilding.Size.y) _isAvailableToPlace = false;
 
-            if (_isAvailableToPlace && IsPlaceTaken()) _isAvailableToPlace = false;
-
             flyingBuilding.transform.position = new Vector3(_xPosition, 0, _yPosition);
+
+            if (_isAvailableToPlace && IsPlaceTaken()) _isAvailableToPlace = false;
             flyingBuilding.SetTransparent(_isAvailableToPlace);
         }
     }
@@ -65,20 +65,35 @@ public class BuildingsGrid : MonoBehaviour
 
                 if (Input.GetMouseButtonDown(0))
                 {
-                    _xPosition = (int)(worldPosition.x / 3) * 3;
-                    _yPosition = (int)(worldPosition.z / 3) * 3;
+                    if (flyingBuilding.Type != BuildingType.Wall)
+                    {
+                        _xPosition = (int)(worldPosition.x / 3) * 3;
+                        _yPosition = (int)(worldPosition.z / 3) * 3;
 
-                    _isAvailableToPlace = true;
+                        flyingBuilding.transform.position = new Vector3(_xPosition, flyingBuilding.transform.position.y, _yPosition);
 
-                    if (_xPosition < 0 || _xPosition > GridSize.x - flyingBuilding.Size.x) _isAvailableToPlace = false;
-                    if (_yPosition < 0 || _yPosition > GridSize.y - flyingBuilding.Size.y) _isAvailableToPlace = false;
+                        _isAvailableToPlace = true;
 
-                    if (_isAvailableToPlace && IsPlaceTaken()) _isAvailableToPlace = false;
+                        if (_xPosition < 0 || _xPosition > GridSize.x - flyingBuilding.Size.x) _isAvailableToPlace = false;
+                        if (_yPosition < 0 || _yPosition > GridSize.y - flyingBuilding.Size.y) _isAvailableToPlace = false;
+                    }
+                    else
+                    {
+                        Ray ray1 = mainCamera.ScreenPointToRay(Input.mousePosition);
+                        RaycastHit hit;
+                        if (Physics.Raycast(ray1, out hit))
+                        {
+                            if (hit.transform.tag == "WallPoint")
+                            {
+                                flyingBuilding.transform.position = hit.transform.position;
+                                _isAvailableToPlace = true;
+                            }
+                        }
+                    }
 
-                    flyingBuilding.transform.position = new Vector3(_xPosition, 0, _yPosition);
+                    if (_isAvailableToPlace) _isAvailableToPlace = IsPlaceTaken();
+
                     flyingBuilding.SetTransparent(_isAvailableToPlace);
-
-                    //PlaceFlyingBuilding(x, y);
                 }
             }
         }
@@ -86,7 +101,12 @@ public class BuildingsGrid : MonoBehaviour
 
     private bool IsPlaceTaken()
     {
-        for (int x = 0; x < flyingBuilding.Size.x; x++)
+        if (flyingBuilding.Colliders.Count != 0)
+            return false;
+
+        return true;
+
+        /*for (int x = 0; x < flyingBuilding.Size.x; x++)
         {
             for (int y = 0; y < flyingBuilding.Size.y; y++)
             {
@@ -94,21 +114,21 @@ public class BuildingsGrid : MonoBehaviour
             }
         }
 
-        return false;
+        return false;*/
     }
 
     public bool PlaceFlyingBuilding()
     {
         if (_isAvailableToPlace)
         {
-            for (int x = 0; x < flyingBuilding.Size.x; x++)
+           /* for (int x = 0; x < flyingBuilding.Size.x; x++)
             {
                 for (int y = 0; y < flyingBuilding.Size.y; y++)
                 {
                     grid[_xPosition + x, _yPosition + y] = flyingBuilding;
                 }
             }
-
+            */
             flyingBuilding.SetNormal();
             flyingBuilding = null;
 

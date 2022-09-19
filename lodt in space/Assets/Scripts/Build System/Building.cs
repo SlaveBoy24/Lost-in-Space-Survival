@@ -17,22 +17,35 @@ public class Building : MonoBehaviour
     public int NeedFloorLevel;
     public List<GameObject> Walls;
     public GameObject Slot;
+    public List<GameObject> Colliders;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.tag != "Ground" && other.transform.tag != "WallPoint")
+            Colliders.Add(other.gameObject);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.transform.tag != "Ground" && other.transform.tag != "WallPoint")
+            Colliders.Remove(other.gameObject);
+    }
 
     public void SetTransparent(bool available)
     {
-        /*if (available)
+        if (available)
         {
             MainRenderer.material.color = Color.green;
         }
         else
         {
             MainRenderer.material.color = Color.red;
-        }*/
+        }
     }
 
     public void SetNormal()
     {
-        /*MainRenderer.material.color = Color.white;*/
+        MainRenderer.material.color = Color.white;
     }
 
     private void OnDrawGizmos()

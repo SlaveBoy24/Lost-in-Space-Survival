@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7930561906105028809, guid: 4201ebbd8c67954449af4a930ad4bf0e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 26
+      value: 26.074
       objectReference: {fileID: 0}
     - target: {fileID: 7930561906105028809, guid: 4201ebbd8c67954449af4a930ad4bf0e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6586,7 +6586,7 @@ GameObject:
   - component: {fileID: 640349642}
   m_Layer: 0
   m_Name: ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -19671,7 +19671,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7930561906105028809, guid: 4201ebbd8c67954449af4a930ad4bf0e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23
+      value: 23.074
       objectReference: {fileID: 0}
     - target: {fileID: 7930561906105028809, guid: 4201ebbd8c67954449af4a930ad4bf0e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -49119,7 +49119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7930561906105028809, guid: 4201ebbd8c67954449af4a930ad4bf0e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.5
+      value: 21.611
       objectReference: {fileID: 0}
     - target: {fileID: 7930561906105028809, guid: 4201ebbd8c67954449af4a930ad4bf0e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -49127,7 +49127,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7930561906105028809, guid: 4201ebbd8c67954449af4a930ad4bf0e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.25
+      value: 14.269
       objectReference: {fileID: 0}
     - target: {fileID: 7930561906105028809, guid: 4201ebbd8c67954449af4a930ad4bf0e, type: 3}
       propertyPath: m_LocalRotation.w
